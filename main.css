@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#vanta {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  color: #fff;
+  background-image: url('/images/background.jpg'); /* repeat center center fixed */
+  /* background-size: cover; */
+}
+
+main {
+  position: relative;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 2s ease-in-out, filter 2s ease-in-out; /*opacity 1 onload in script */
+}
+
+header {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header > img {
+  margin-top: 1em;
+  width: 8em;
+  border-radius: 50%;
+  border: 3px solid #efa5fe;
+  box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+}
+
+header > h1 {
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #efa5fe;
+  background-color: rgba(7, 37, 151, 0.8);
+  border-radius: 1em;
+  margin-top: 2em;
+  padding: 0.3em 0.6em;
+  border: 2px solid #efa5fe;
+}
+
+ul {
+  list-style-type: none;
+  padding: 2em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul > li {
+  z-index: 1;
+  box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+  border-radius: 10em;
+  padding: 0.6em;
+  margin: 1em 0;
+  background-color: rgba(239, 165, 254, 0.8);
+  /* backdrop-filter: blur(10px); not working, work around above. */
+  width: 14em;
+}
+
+ul > li > a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+}
+
+a {
+  color: #072597;
+  text-decoration: none;
+  font-weight: 500;
+}
